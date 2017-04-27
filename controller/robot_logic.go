@@ -66,6 +66,7 @@ func (self *Logic) doLuck(robot, user string) (int, bool) {
 			return self.getRandLuckCode(), false
 		}
 		if lc.NowNum < int64(self.cfg.Luck1Num) {
+			lc.NowNum = lc.NowNum + 1
 			err, ok := models.UpdateLuckCode(lc, int64(self.cfg.Luck1Num))
 			if err != nil {
 				holmes.Error("update luck code error: %v", err)
