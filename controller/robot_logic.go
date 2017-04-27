@@ -83,7 +83,7 @@ func (self *Logic) doLuck(robot, user string) (int, bool) {
 }
 
 func (self *Logic) getRandLuckCode() int {
-	luckCode := rand.Intn(8701)
+	luckCode := rand.Intn(1701)
 	luckCode += 188
 	
 	if luckCode == self.cfg.LuckCode1 {
