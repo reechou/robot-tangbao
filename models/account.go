@@ -9,10 +9,10 @@ import (
 
 type RobotUserLuck struct {
 	ID        int64  `xorm:"pk autoincr" json:"id"`
-	Robot     string `xorm:"not null default '' varchar(256) unique(robot_user)" json:"robot"`
-	User      string `xorm:"not null default '' varchar(256) unique(robot_user)" json:"user"`
+	Robot     string `xorm:"not null default '' varchar(64) unique(robot_user)" json:"robot"`
+	User      string `xorm:"not null default '' varchar(190) unique(robot_user)" json:"user"`
 	ShareNum  int64  `xorm:"not null default 0 int" json:"shareNum"`
-	LuckCode  int64  `xorm:"not null default 0 int unique" json:"type"`
+	LuckCode  int64  `xorm:"not null default 0 int" json:"type"`
 	CreatedAt int64  `xorm:"not null default 0 int" json:"createdAt"`
 	UpdatedAt   int64  `xorm:"not null default 0 int" json:"-"`
 }
