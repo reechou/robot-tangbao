@@ -16,6 +16,8 @@ func (self *Logic) HandleReceiveMsg(msg *robot_proto.ReceiveMsgInfo) {
 	switch msg.BaseInfo.ReceiveEvent {
 	case robot_proto.RECEIVE_EVENT_MSG:
 		self.handleMsg(msg)
+	case robot_proto.RECEIVE_EVENT_ADD, robot_proto.RECEIVE_EVENT_ADD_FRIEND:
+		self.doTangbao(msg)
 	}
 }
 
