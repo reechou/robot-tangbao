@@ -105,7 +105,7 @@ func (self *Logic) doTangbao(msg *robot_proto.ReceiveMsgInfo) {
 			"新加的家长请第一时间完成报名！报名成功即可免费给宝宝领取一整年的衣服啦！\n\n" +
 			"【报名方式】\n1、复制下方文字，长按保存图片\n" +
 			"2、将文字和图片转发到【朋友圈】和【2个微信群】（最好是家长群），后截图\n" +
-			"3、将3张截图发给我，审核通过后报名成功",
+			"3、将3张截图发给我，审核通过后报名成功\n--------------\n朋友圈转发内容及配图如下\n↓↓↓",
 			MsgType: robot_proto.RECEIVE_MSG_TYPE_TEXT},
 		MsgInfo{Msg: "太爽啦！免费给孩子拿了【一整年】的衣服，今年春夏秋冬都不用买啦！欢乐等包裹中……点开图片长按关注这个号并发送“领衣服”就行，仅限前100名哟！",
 			MsgType: robot_proto.RECEIVE_MSG_TYPE_TEXT},
